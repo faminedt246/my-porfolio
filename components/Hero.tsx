@@ -21,7 +21,7 @@ export default function Hero() {
         </span>.
       </h1>
       <h2 className="text-2xl md:text-3xl font-medium text-slate-400">
-        {profileData.role}
+        A {profileData.role}
       </h2>
       <p className="max-w-2xl text-lg text-slate-500 leading-relaxed">
         {profileData.tagline}
