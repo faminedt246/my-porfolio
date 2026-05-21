@@ -22,7 +22,7 @@ export const projects: Project[] = [
     id: "ip-lifecycle-erp",
     title: "IP-Lifecycle-ERP",
     description: "A B2B enterprise resource planning system featuring Kanban boards and deal room components to manage business lifecycles.",
-    techStack: ["Next.js", "React", "Supabase", "Tailwind CSS"],
+    techStack: ["Next.js", "React", "Supabase", "CSS Modules"],
     status: "In Progress",
     githubUrl: "https://github.com/FamineDT246/ip-lifecycle-erp"
   },
