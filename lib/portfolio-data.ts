@@ -51,6 +51,6 @@ export const projects: Project[] = [
     techStack: ["Next.js", "React", "Supabase", "Tailwind CSS"],
     status: "Completed",
     githubUrl: "https://github.com/FamineDT246/kiaras-treats",
-    liveUrl: "https://kiaras-treats.vercel.app"
+    liveUrl: "https://kays-delights.vercel.app"
   }
 ];
