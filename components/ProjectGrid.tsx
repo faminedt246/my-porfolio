@@ -3,7 +3,7 @@ import { projects } from '../lib/portfolio-data';
 export default function ProjectGrid() {
   return (
     <section className="py-16">
-      <h3 className="text-3xl font-bold text-slate-100 mb-10">My Projects</h3>
+      <h3 className="text-3xl font-bold text-slate-100 mb-10">Selected Work</h3>
       <div className="flex flex-col gap-8">
         {projects.map((project) => (
           <div 
@@ -44,19 +44,26 @@ export default function ProjectGrid() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold text-white bg-cyan-600 hover:bg-cyan-500 px-6 py-3 rounded-lg inline-flex items-center justify-center gap-2 transition-colors w-full sm:w-auto"
+                  className="text-sm font-semibold text-white bg-cyan-600 hover:bg-cyan-500 px-6 py-3 rounded-lg inline-flex items-center justify-center gap-2 transition-colors w-full sm:w-auto shadow-sm"
                 >
                   View Website &rarr;
                 </a>
               )}
-              <a 
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-semibold text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg inline-flex items-center justify-center gap-2 transition-colors w-full sm:w-auto"
-              >
-                View Repository
-              </a>
+              
+              {project.githubUrl ? (
+                <a 
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg inline-flex items-center justify-center gap-2 transition-colors w-full sm:w-auto"
+                >
+                  View Repository
+                </a>
+              ) : (
+                <span className="text-sm font-semibold text-slate-500 border border-slate-800 px-6 py-3 rounded-lg inline-flex items-center justify-center gap-2 cursor-not-allowed w-full sm:w-auto bg-slate-900/50">
+                  Private Repository 🔒
+                </span>
+              )}
             </div>
           </div>
         ))}
